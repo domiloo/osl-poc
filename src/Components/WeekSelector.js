@@ -9,12 +9,12 @@ class WeekSelector extends Component{
     }
 
     getDateOfWeek(week, y) {
-        var d = new Date("Jan 01, " + y + " 01:00:00");
-        var dayMs = (24 * 60 * 60 * 1000);
-        var offSetTimeStart = dayMs * (d.getDay() - 1);
-        var w = d.getTime() + 604800000 * (week - 1) - offSetTimeStart; //reducing the offset here
-        var n1 = new Date(w);
-        var n2 = new Date(w + 518400000);
+        const d = new Date("Jan 01, " + y + " 01:00:00");
+        const dayMs = (24 * 60 * 60 * 1000);
+        const offSetTimeStart = dayMs * (d.getDay() - 1);
+        const w = d.getTime() + 604800000 * (week - 1) - offSetTimeStart; //reducing the offset here
+        const n1 = new Date(w);
+        const n2 = new Date(w + 518400000);
         return {
             dateFrom: n1,
             dateTo: n2
@@ -34,7 +34,7 @@ class WeekSelector extends Component{
     }
 
     render() {
-        var weekDays = this.getDateOfWeek(this.state.week, 2019);
+        const weekDays = this.getDateOfWeek(this.state.week, 2019);
         return (
             <div className="well output">
                 <button type="button" className="btn btn-primary" onClick={this.handleMinus.bind(this)}>-</button>

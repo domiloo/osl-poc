@@ -20,7 +20,7 @@ class TaskView extends Component{
         super(props);
         this.state = {
             task: props.task
-        }
+        };
         this.handleDone = this.handleDone.bind(this);
     }
 
