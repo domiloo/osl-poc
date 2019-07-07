@@ -8,7 +8,9 @@
   pointer-events: none;
 }
 
-.App-header {
+
+
+.App-nav {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -21,6 +23,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+body {
+  padding-top: 5rem;
 }
 
 @keyframes App-logo-spin {
